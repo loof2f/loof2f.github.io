@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://localhost:8002/accounts/settings/# -->
+<!-- saved from url=(0041)#accounts/settings/# -->
 <html style="--scrollbar-width: 0px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Chat window [TEST]</title>
-        <link rel="icon" type="image/jpeg" href="#">
-        <link rel="apple-touch-icon" href="#">
-        <link rel="manifest" href="#">
+        <title>Chat Window</title>
+        <link rel="icon" type="image/jpeg" href="#static/img/favicon.svg">
+        <link rel="apple-touch-icon" href="#static/img/apple-touch-icon.png">
+        <link rel="manifest" href="#manifest.json">
         <meta name="viewport" content="minimal-ui, height=device-height width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,24 +13,24 @@
         <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
 
         
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
-        <link rel="stylesheet" href="#">
+        <link rel="stylesheet" href="/files/base.css">
+        <link rel="stylesheet" href="/files/bottom-nav.css">
+        <link rel="stylesheet" href="/files/form.css">
+        <link rel="stylesheet" href="/files/menu-wrapper.css">
+        <link rel="stylesheet" href="/files/slider-nav.css">
+        <link rel="stylesheet" href="/files/top-nav.css">
+        <link rel="stylesheet" href="/files/payment-methods.css">
+        <link rel="stylesheet" href="/files/comment-menu.css">
         
 
-        <link rel="stylesheet" href="#" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+        <link rel="stylesheet" href="/files/css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
 
         
 
         
-<link type="text/css" rel="stylesheet" href="#">
-<link type="text/css" rel="stylesheet" href="#">
-<link type="text/css" rel="stylesheet" href="#">
+<link type="text/css" rel="stylesheet" href="/files/standard.css">
+<link type="text/css" rel="stylesheet" href="/files/settings.css">
+<link type="text/css" rel="stylesheet" href="/files/account-header.css">
 
     </head>
         <body class="nonav popup-active" oncontextmenu="return false;">
@@ -47,8 +47,8 @@
         
             <div class="right">
                 <a href="#" class="navbar-item">feed</a>
-                <a href="#" class="navbar-item">explore</a>
-                <a href="#" class="navbar-item">
+                <a href="#explore/" class="navbar-item">explore</a>
+                <a href="#messenger/" class="navbar-item">
                     messenger
                     
                 </a>
@@ -96,22 +96,22 @@
         
 
         <span class="options-title">security</span>
-        <a href="#" class="option border-bottom">change-email-address</a>
-        <a href="#" class="option border-bottom">change-password</a>
+        <a href="#accounts/setup/email/" class="option border-bottom">change-email-address</a>
+        <a href="#accounts/password/change/" class="option border-bottom">change-password</a>
         
-        <a href="#" class="option border-bottom">
+        <a href="#account/two_factor/setup/" class="option border-bottom">
             two-factor-authentication
         </a>
         
-        <a href="#" class="option">link-twitter-account</a>
+        <a href="#accounts/settings/twitter/" class="option">link-twitter-account</a>
 
         
 
         <span class="options-title">other</span>
         
-            <a href="#" class="option border-bottom">deactivate-account</a>
+            <a href="#accounts/deactivate/" class="option border-bottom">deactivate-account</a>
         
-        <a href="#" class="option">logout</a>
+        <a href="#accounts/logout/" class="option">logout</a>
 
         <div class="tab" data-tab="public">
             <div class="account-header">
@@ -6510,10 +6510,10 @@
 <nav class="bottomnav">
     <div class="bottomnav-inner">
         <a href="#" class="menu-item home-icon"></a>
-        <a href="#" class="menu-item explore-icon"></a>
+        <a href="#explore/" class="menu-item explore-icon"></a>
         
             <div class="messages-container">
-                <a href="#" class="menu-item messenger-icon"></a>
+                <a href="#messenger/" class="menu-item messenger-icon"></a>
             </div>
         <div class="menu-item toggle-slider-nav profile">
             
@@ -6561,7 +6561,7 @@
             
             
             
-    <a href="#" class="profile-image" style="background-image: url(&#39;/static/icons/UI_elements/F2F_placeholder_white.svg&#39;)"></a>
+    <a href="#accounts/account/edit/" class="profile-image" style="background-image: url(&#39;/static/icons/UI_elements/F2F_placeholder_white.svg&#39;)"></a>
 
 
             
@@ -6577,7 +6577,7 @@
 
         <div class="list">
             <div class="group">
-                <a href="#" class="notifications">
+                <a href="#notifications/" class="notifications">
                     notifications
                 </a>
                 
@@ -6585,37 +6585,37 @@
             </div>
             
             <div class="group">
-                <a href="#" class="bookmarks">
+                <a href="#accounts/post-collections/" class="bookmarks">
                     saved-or-paid-posts
                 </a>
-                <a href="#" class="subscriptions">
+                <a href="#accounts/subscriptions/" class="subscriptions">
                     subscriptions
                 </a>
-                <a href="#" class="following">
+                <a href="#accounts/following/" class="following">
                     following
                 </a>
             </div>
             <div class="group">
-                <a href="#" class="payment-methods">
+                <a href="#accounts/paymentmethods/" class="payment-methods">
                     payment-methods
                 </a>
                 
                     
-                        <a href="#" class="become">
+                        <a href="#accounts/creator/become/" class="become">
                             become-a-creator
                         </a>
                     
                 
-                <a href="#" class="help">faq</a>
+                <a href="https://about.localhost:8000/help/" class="help">faq</a>
                 
-                <a href="#" class="support-chat" onclick="Intercom(&#39;show&#39;);">support-chat</a>
-                <a href="#" class="settings">settings</a>
+                <a href="#accounts/settings/#" class="support-chat" onclick="Intercom(&#39;show&#39;);">support-chat</a>
+                <a href="#accounts/settings/" class="settings">settings</a>
             </div>
             
                 
             
             <div class="group">
-                <a href="#" class="logout" onclick="onLogoutClicked(event)">logout</a>
+                <a href="#accounts/logout/" class="logout" onclick="onLogoutClicked(event)">logout</a>
             </div>
         </div>
     </div>
@@ -6652,21 +6652,7 @@
 <script src="/files/editProfile.js"></script>
 
 
-        
-        
-        <script>
-          var _paq = window._paq = window._paq || [];
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="https://s.f2f.net/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-          })();
-        </script>
-        
+    
         
     
 
