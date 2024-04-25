@@ -1,0 +1,95 @@
+.account-header .top-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--medium-gutter-size) + 3px);
+    position: relative;
+}
+
+.account-header .top-actions a {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.account-header .top-actions .add {
+    background-image: url(/static/icons/add_menu.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 19px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+}
+
+.account-header .top-actions .back {
+    background-image: url(/static/icons/chevron-left.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 18px;
+    left: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+}
+
+.account-header .top-actions .edit {
+    background-image: url(/static/icons/menu.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: var(--normal-icon-size);
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+}
+
+.account-header .top-actions .middle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.account-header .top-actions .save {
+    background-image: url(/static/icons/save.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: var(--normal-icon-size);
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+}
+
+.account-header .top-actions .upload {
+    background-image: url(/static/icons/upload.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: var(--normal-icon-size);
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+}

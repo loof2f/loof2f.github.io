@@ -1,0 +1,59 @@
+.menu-wrapper .menu {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    display: none;
+    position: absolute;
+    right: var(--xsmall-gutter-size);
+    top: calc(50px + var(--xsmall-gutter-size));
+    z-index: 999;
+}
+
+.menu-wrapper .menu.active {
+    display: block;
+}
+
+.menu-wrapper .menu .menu-item {
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    min-width: 128px;
+    padding: var(--small-gutter-size);
+    text-decoration: none;
+}
+
+.menu-wrapper .menu .menu-item:not(:last-child) {
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.menu-wrapper .menu .menu-item .inline-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 23px;
+    margin-right: var(--xsmall-gutter-size);
+    width: 23px;
+}
+
+.menu-wrapper .menu .menu-item .inline-icon.icon-edit {
+    background-image: url(/static/icons/edit.svg);
+}
+
+.menu-wrapper .menu .menu-item .inline-icon.icon-view {
+    background-image: url(/static/icons/view.svg);
+}
+
+.menu-wrapper .menu-trigger {
+    background-image: url(/static/icons/menu.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: var(--normal-icon-size);
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+.menu-wrapper .menu-trigger.light {
+    background-image: url(/static/icons/menu-white.svg);
+}

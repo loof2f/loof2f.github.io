@@ -1,0 +1,103 @@
+.comment-menu {
+    background: rgba(0,0,0,0.25);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.comment-menu.active {
+    display: block;
+}
+
+.comment-menu .inner {
+    background: #FFFFFF;
+    border-radius: 0;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    bottom: 0;
+    left: 0;
+    max-height: calc(var(--full-post-height) - 65px);
+    max-width: 100%;
+    overflow-y: scroll;
+    padding-bottom: var(--medium-gutter-size);
+    position: absolute;
+    right: 0;
+    top: auto;
+    transform: none;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.comment-menu .inner::-webkit-scrollbar {
+    display: none;
+}
+
+.comment-menu .inner .handle {
+    display: block;
+    height: calc(5px + 2 * var(--medium-gutter-size));
+    position: relative;
+}
+
+.comment-menu .inner .handle:after {
+    background: var(--separator-color);
+    border-radius: 6px;
+    content: '';
+    display: block;
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50px;
+}
+
+.comment-menu .inner a,
+.comment-menu .inner span {
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: var(--medium-gutter-size);
+    padding-bottom: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.comment-menu .inner a:first-child,
+.comment-menu .inner span:first-child {
+    padding-top: 0;
+}
+
+.comment-menu .inner span.danger,
+.comment-menu .inner span.delete {
+    color: var(--f2f-red);
+}
+
+.comment-menu[data-role="creator"] .inner a:not(.creator),
+.comment-menu[data-role="creator"] .inner span:not(.creator) {
+    display: none;
+}
+
+.comment-menu[data-role="poster"] .inner a:not(.poster),
+.comment-menu[data-role="poster"] .inner span:not(.poster) {
+    display: none;
+}
+
+.comment-menu[data-role="user"] .inner a:not(.user),
+.comment-menu[data-role="user"] .inner span:not(.user) {
+    display: none;
+}
+
+
+@media screen and (min-width: 1050px) {
+    .comment-menu .inner .list {
+        margin: 0 auto;
+        max-width: 1050px;
+    }
+}

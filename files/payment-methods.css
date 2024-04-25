@@ -1,0 +1,266 @@
+.payment-methods {
+    background: #FFFFFF;
+}
+
+.payment-methods.inactive {
+    cursor: wait;
+    pointer-events: none;
+}
+
+.payment-methods .button-wrapper {
+    margin: 0 var(--medium-gutter-size);
+    margin-bottom: var(--small-gutter-size);
+    padding: 0;
+}
+
+.payment-methods .button-wrapper > div {
+    width: 100%;
+}
+
+.payment-methods .button-wrapper .button {
+    width: 100%;
+}
+
+.payment-methods .button-wrapper .button.inactive {
+    pointer-events: none;
+}
+
+.payment-methods .button-wrapper .button.unavailable {
+    background: var(--f2f-react-grey);
+}
+
+.payment-methods .chosen-payment-wrapper {
+    cursor: default !important;
+    margin: var(--medium-gutter-size);
+}
+
+.payment-methods .mandate-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: var(--small-gutter-size) var(--medium-gutter-size);
+    padding-bottom: 0;
+}
+
+.payment-methods .chosen-payment-method,
+.payment-methods .mandate {
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.payment-methods .chosen-payment-method .icon,
+.payment-methods .mandate .icon {
+    background-image: url(/static/icons/payments/paymentmethods/creditcard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    height: 50px;
+    padding: var(--small-gutter-size);
+    width: 50px;
+}
+
+.payment-methods .chosen-payment-method .text-wrapper,
+.payment-methods .mandate .text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-methods .chosen-payment-method .text-wrapper .date-added,
+.payment-methods .mandate .text-wrapper .date-added {
+    color: var(--darkgrey);
+    font-size: 13px;
+}
+
+.payment-methods .chosen-payment-method .text-wrapper .name,
+.payment-methods .mandate .text-wrapper .name {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.payment-methods .payment-method-wrapper {
+    /* grid-template-columns is set from js */
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    padding: var(--small-gutter-size) var(--medium-gutter-size);
+    padding-right: 0;
+    width: 100%;
+}
+
+.payment-methods .payment-method-wrapper .payment-method-flex {
+    animation: fade-in 0.2s ease-in-out;
+    margin-right: var(--small-gutter-size);
+}
+
+.payment-methods .payment-method-wrapper .payment-method {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
+
+.payment-methods .payment-method-wrapper .payment-method .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.payment-methods .payment-method-wrapper .payment-method .text-wrapper {
+    display: none;
+}
+
+.payment-methods .summary {
+    border: 1px solid var(--lightgrey);
+    font-size: 14px;
+    margin: var(--medium-gutter-size);
+    margin-top: 0;
+    padding: var(--xsmall-gutter-size);
+}
+
+.radio-button-card {
+    border: 2px solid var(--f2f-react-grey);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: var(--small-gutter-size);
+    position: relative;
+}
+
+.payment-method-flex.active .radio-button-card,
+.radio-button-card.active {
+    border: 2px solid var(--f2f-secondary);
+}
+
+.radio-button-card .toggle {
+    background-color: var(--f2f-react-grey);
+    border-top-left-radius: 4px;
+    bottom: 0;
+    height: 24px;
+    right: 0;
+    position: absolute;
+    width: 24px;
+}
+
+.payment-method-flex.active .radio-button-card .toggle,
+.radio-button-card.active .toggle {
+    background-color: var(--f2f-secondary);
+}
+
+.radio-button-card .toggle .circle {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    height: 11px;
+    left: 55%;
+    margin: 0 auto;
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    width: 11px;
+}
+
+.step:not(.selected) .payment-methods .confirm-payment-method,
+.step.selected .payment-methods .select-payment-method {
+    display: none;
+}
+
+.payment-methods .group-header {
+    display: block;
+    font-weight: 600;
+    padding: var(--medium-gutter-size);
+    padding-bottom: 0;
+}
+
+.payment-methods .group-header.no-top-padding {
+    padding-top: 0;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .payment-method:first-child {
+        padding-top: 0;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .radio-button-card .toggle {
+        height: 16px;
+        width: 16px;
+    }
+
+    .radio-button-card .toggle .circle {
+        height: 8px;
+        width: 8px;
+    }
+}
+
+
+@media screen and (max-width: 625px) {
+    .payment-methods .payment-method-wrapper .payment-method-flex {
+        min-width: 42px;
+    }
+
+    .payment-methods .payment-method-wrapper .payment-method {
+        height: 50px;
+    }
+
+    .payment-methods .chosen-payment-method .icon,
+    .payment-methods .mandate .icon,
+    .payment-methods .payment-method-wrapper .payment-method .icon {
+        background-size: 32px;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .payment-methods .payment-method-wrapper .payment-method-flex {
+        min-width: 32px;
+    }
+
+    .payment-methods .payment-method-wrapper .payment-method .icon {
+        background-size: 28px;
+    }
+}
+
+
+@media screen and (min-width: 1050px) {
+    .payment-methods .mandate-wrapper .mandate .text-wrapper .date-added {
+        font-size: 14px;
+    }
+
+    .payment-methods .mandate-wrapper .mandate .text-wrapper .name {
+        font-size: 16px;
+    }
+
+    .payment-methods .summary {
+        border: 1px solid var(--separator-color);
+        border-radius: 4px;
+        font-size: 14px;
+        margin: var(--medium-gutter-size);
+        margin-top: 0;
+        padding: var(--xsmall-gutter-size);
+    }
+}
+
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

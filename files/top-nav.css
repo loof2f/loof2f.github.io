@@ -1,0 +1,109 @@
+@import url(/static/css/f2f/components/button.css);
+
+nav.navbar {
+    background: #fff;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    padding: var(--xsmall-gutter-size) 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.nonav nav.navbar {
+    display: none;
+}
+
+nav.navbar .navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+nav.navbar .navbar-inner .navbar-item {
+    color: var(--black);
+    filter: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 34px;
+    line-height: 32px;
+    position: relative;
+}
+
+nav.navbar .navbar-inner .navbar-item.active {
+    color: var(--f2f-secondary) !important;
+}
+
+nav.navbar .navbar-inner .navbar-item.button {
+    line-height: 30px;
+}
+
+nav.navbar .navbar-inner .navbar-item .unread-indicator {
+    background: #FE4364;
+    border-radius: 6px;
+    height: 6px;
+    position: absolute;
+    right: -9px;
+    top: 5px;
+    width: 6px;
+}
+
+nav.navbar .navbar-inner .right {
+    display: none;
+}
+
+nav.navbar .navbar-inner .navbar-item img {
+    box-sizing: border-box;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1050px) {
+    nav.navbar {
+        box-shadow: none;
+        position: fixed;
+    }
+
+    .nonav nav.navbar {
+        display: block;
+    }
+
+    .nonav.force nav.navbar {
+        display: none;
+        padding-top: 0;
+    }
+
+    nav.navbar .navbar-inner .right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    nav.navbar .navbar-inner .right .navbar-item {
+        color: var(--black);
+        margin-left: var(--large-gutter-size);
+        text-decoration: none;
+    }
+
+    nav.navbar .navbar-inner .right .navbar-item.account {
+        cursor: pointer;
+    }
+
+    nav.navbar .navbar-inner .right .navbar-item.account .profile-image {
+        border: none;
+        height: 36px;
+        margin-top: -1px;
+        width: 36px;
+    }
+
+    nav.navbar .navbar-inner .right .navbar-item.button {
+        background: transparent;
+        border: 2px solid var(--black);
+        padding: 0 15px;
+    }
+}
